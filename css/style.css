@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* font-family: "Courier Prime", monospace; */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap'); 
+/* font-family: "Syne Mono", monospace; */
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: "Poppins", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier Prime", monospace;
+}
+
+:root {
+  --primary-color: #242424;
+  --secondary-color: #f4f4f4;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  min-height: 100vh;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-items: center;
+  position: relative; /* Ensure relative positioning for absolute child elements */
+}
+
+.image-container {
+  width: 60%;
+  margin: 0 auto;
+  height: auto;
+  position: relative; /* Ensure relative positioning for absolute child elements */
+}
+
+.image-container > img {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.front_image {
+  z-index: 2;
+  position: relative;
+  animation: rotate 30s linear infinite;
+}
+
+.back_image {
+  z-index: 1;
+  position: absolute;
+  animation: rotate-reverse 40s linear infinite;
+}
+
+.container-content {
+  padding: 2rem;
+  line-height: 1.4;
+  border-radius: 1.5rem;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.qr-code-container {
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+  border-radius: 5rem;
+  background-color: white;
+}
+
+.qr-code-container img {
+  max-width: 12rem;
+}
+
+.width {
+  width: 90%;
+}
+
+.light-container {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.dark-container {
+  border: 1px solid var(--secondary-color);
+}
+
+.bottom-right-radius {
+  border-bottom-right-radius: 5rem;
+}
+
+.top-left-radius {
+  border-top-left-radius: 5rem;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.timer-container {
+  padding: 2rem;
+  line-height: 1.4;
+  border-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  background: linear-gradient(153deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+.countdown {
+  margin: 1rem auto;
+  
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.description {
+  font-family: "Poppins", sans-serif;
+}
+
+.timer {
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+.developer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgb(173, 173, 173);
+  margin: 2rem;
+}
+
+.hero-section {
+  border-bottom-right-radius: 6rem;
+}
+
+.dev-section {
+  border-bottom-left-radius: 6rem;
+}
+
+.tricky {
+  border-top-right-radius: 6rem;
+}
+
+.apply {
+  border-top-left-radius: 6rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+a:visited {
+  color: var(--secondary-color);
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(-360deg);
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .image-container {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .main-container {
+    padding: 2rem 5rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .width {
+    width: 100%;
+  }
+
+  .image-container {
+    grid-column: span 4;
+  }
+
+  .hero-section {
+    grid-column: span 2;
+  }
+
+  .dev-section {
+    grid-column: span 2;
+  }
+
+  .timer-container {
+    grid-column: span 4;
+  }
+
+  .countdown {
+    width: 50%;
+  }
+
+  .timer {
+    font-size: 4rem;
+  }
+
+  .tricky {
+    grid-column: span 2;
+  }
+
+  .apply {
+    grid-column: span 2;
+  }
+
+  .qr-code-container {
+    grid-column: span 4;
+  }
+}
