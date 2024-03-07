@@ -70,7 +70,7 @@ p {
   display: flex;
   text-align: left;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .qr-code-container {
