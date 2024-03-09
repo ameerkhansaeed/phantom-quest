@@ -29,6 +29,16 @@ p {
   font-size: 1.3rem;
 }
 
+.red-span {
+  color: #e63946;
+  font-weight: 700;
+}
+
+.bold-span {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
